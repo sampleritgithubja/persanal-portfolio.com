@@ -58,16 +58,10 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
-.text-animate{
-    position: relative;
-    width: 32.8rem;
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
 }
-.text-animate p{
-    font-size: 3.2rem;
-    font-weight: 700;
-    color: deepskyblue;
-}
-
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
@@ -106,7 +100,6 @@ nav ul li a:hover::after{
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
-    color: #61b752;
 }
 .tab-links{
     margin-right: 50px;
@@ -137,9 +130,6 @@ nav ul li a:hover::after{
 .tab-contents ul li span{
     color: #b54769;
     font-size: 14px;
-}
-.tab-content.active-tab ul li span{
-    color: #61b752;
 }
 .tab-contents{
     display: none;

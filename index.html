@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website - Easy Tutorials</title>
     <link rel="stylesheet" href="style.css">
@@ -21,11 +22,10 @@
          </ul>
          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
        </nav>
-       <div class="text-animate">
+       <div class="header-text">
           <p>ELECTRONIC ENGINEER</p>
           <h1>Hi, I'm <span> Jagadeesh</span><br> from India</h1>
-       </div>
-
+       </div> 
     </div>
 </div>
 <!-- -----------about------------ --->
@@ -41,9 +41,9 @@
                     institutions, from the department of Electronic And Communication Engineering.</p>
 
                  <div class="tab-titles">
-                       <p class="tab-links" onclick="opentab('skills')">Skills</p>
-                       <p class="tab-links" onclick="opentab('experience')"></p>
-                       <p class="tab-links" onclick="opentab('education')"></p>
+                       <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                       <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                       <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>                   
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -52,12 +52,12 @@
                             <li><span>JAVA</span><br>Basics in JAVA</li>
                         </ul>
                     </div>
-                    <div class="tab-content active-tab" id="experience">
+                    <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Education</span><br></li>                                            
+                            <li><span></span><br>zero experience</li>                                            
                         </ul>
                     </div>
-                    <div class="tab-contents active-tab" id="education">
+                    <div class="tab-contents" id="education">
                        <ul>
                            <li><span>2023</span><br>Persuring 4th Btech</li>
                            <li><span>2020</span><br>Intermediate(M.P.C) From SASI Jr.college</li>
@@ -126,25 +126,27 @@
     </div>
 </div>
 
-     <script>
+      <script>
 
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
 
         function opentab(tabname){ 
             for(tablink of tablinks){              
-                tablink.classlist.remove("active-link");
+                tablink.classList.remove("active-link");
             }
             for(tabcontent of tabcontents){       
-                tabcontent.classlist.remove("active-tab");
+                tabcontent.classList.remove("active-tab");
             }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
 
-     </script>
+      </script>
 
 <script>
 
-    var sidemeu = document.getElementById("sidemenu");
+    var sidemeu=document.getElementById("sidemenu");
 
     function openmenu(){
         sidemeu.style.right = "0";
